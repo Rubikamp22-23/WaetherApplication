@@ -9,17 +9,18 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import info.sanaebadi.weatheractivity.base.BaseFragment;
-import info.sanaebadi.weatheractivity.databinding.FragmentHomeBinding;
+import info.sanaebadi.weatheractivity.databinding.FragmentSettingBinding;
 
 
-public class HomeFragment extends BaseFragment {
+public class SettingFragment extends BaseFragment {
 
-    private FragmentHomeBinding binding;
+    private FragmentSettingBinding binding;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        binding = FragmentHomeBinding.inflate(inflater, container, false);
+        // Inflate the layout for this fragment
+        binding = FragmentSettingBinding.inflate(inflater, container, false);
         return binding.getRoot();
     }
 
@@ -27,4 +28,6 @@ public class HomeFragment extends BaseFragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
     }
+
+
 }

@@ -1,21 +1,27 @@
 package info.sanaebadi.weatheractivity.ui.activity;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
-import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
+import androidx.navigation.ui.NavigationUI;
 
 import info.sanaebadi.weatheractivity.R;
+import info.sanaebadi.weatheractivity.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
 
-    private TextView test;
+    private ActivityMainBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        binding = ActivityMainBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
 
-       test.setText("jkasnfjdhb");
+        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
+
+        NavigationUI.setupWithNavController(binding.bottomNavigation, navController);
     }
 }

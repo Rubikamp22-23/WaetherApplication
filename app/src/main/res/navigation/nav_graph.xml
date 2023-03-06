@@ -12,7 +12,7 @@
         tools:layout="@layout/fragment_details" />
     <fragment
         android:id="@+id/homeFragment"
-        android:name="info.sanaebadi.weatheractivity.ui.fragment.HomeFragment"
+        android:name="info.sanaebadi.weatheractivity.ui.fragment.home.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
         <action

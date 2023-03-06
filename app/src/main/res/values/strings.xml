@@ -5,4 +5,6 @@
     <string name="profile">Profile</string>
     <string name="setting">Setting</string>
     <string name="home">Home</string>
+    <string name="nav_open">Open</string>
+    <string name="nav_close">Close</string>
 </resources>

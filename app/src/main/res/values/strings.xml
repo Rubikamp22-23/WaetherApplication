@@ -8,4 +8,9 @@
     <string name="nav_open">Open</string>
     <string name="nav_close">Close</string>
     <string name="welcome_to_my_app">Welcome to my app!</string>
+    <string name="item1">Item1</string>
+    <string name="item2">Item2</string>
+    <string name="sub_item_2">Sub item 2</string>
+    <string name="sub_item_1">Sub item 1</string>
+    <string name="sub_items">Sub items</string>
 </resources>

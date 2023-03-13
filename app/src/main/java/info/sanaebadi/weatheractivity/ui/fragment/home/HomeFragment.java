@@ -9,6 +9,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.tabs.TabLayout;
 
 import info.sanaebadi.weatheractivity.base.BaseFragment;
@@ -55,5 +56,12 @@ public class HomeFragment extends BaseFragment {
 
             }
         });
+
+        binding.fab.setOnClickListener(view1 -> clickOnFab());
+    }
+
+    private void clickOnFab() {
+        Snackbar snackbar = Snackbar.make(binding.coordinator, "Welcome to our app!", Snackbar.LENGTH_LONG);
+        snackbar.show();
     }
 }

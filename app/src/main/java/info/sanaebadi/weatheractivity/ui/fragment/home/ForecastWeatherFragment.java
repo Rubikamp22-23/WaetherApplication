@@ -1,4 +1,4 @@
-package info.sanaebadi.weatheractivity.ui.fragment;
+package info.sanaebadi.weatheractivity.ui.fragment.home;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -8,18 +8,20 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import info.sanaebadi.weatheractivity.R;
 import info.sanaebadi.weatheractivity.base.BaseFragment;
-import info.sanaebadi.weatheractivity.databinding.FragmentHomeBinding;
+import info.sanaebadi.weatheractivity.databinding.FragmentForecastWeatherBinding;
 
 
-public class HomeFragment extends BaseFragment {
+public class ForecastWeatherFragment extends BaseFragment {
 
-    private FragmentHomeBinding binding;
+    private FragmentForecastWeatherBinding binding;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        binding = FragmentHomeBinding.inflate(inflater, container, false);
+        // Inflate the layout for this fragment
+        binding = FragmentForecastWeatherBinding.inflate(inflater, container, false);
         return binding.getRoot();
     }
 

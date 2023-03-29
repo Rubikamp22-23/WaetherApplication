@@ -1,9 +1,11 @@
 package info.sanaebadi.weatheractivity.ui.activity;
 
 import android.content.DialogInterface;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
@@ -23,6 +25,7 @@ import java.util.Objects;
 import info.sanaebadi.weatheractivity.R;
 import info.sanaebadi.weatheractivity.base.BaseActivity;
 import info.sanaebadi.weatheractivity.databinding.ActivityMainBinding;
+import info.sanaebadi.weatheractivity.util.Const;
 
 public class MainActivity extends BaseActivity {
 
@@ -33,6 +36,9 @@ public class MainActivity extends BaseActivity {
     private NavController navController;
 
     boolean doubleBackToExitPressedOnce = false;
+
+    SharedPreferences sharedPreferences;
+    SharedPreferences.Editor sharedEditor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -77,6 +83,10 @@ public class MainActivity extends BaseActivity {
             case R.id.settingFragment:
                 navController.navigate(R.id.settingFragment);
                 break;
+
+            case R.id.loginFragment:
+                navController.navigate(R.id.loginFragment);
+                break;
         }
 
         drawerLayout.closeDrawers();
@@ -89,6 +99,10 @@ public class MainActivity extends BaseActivity {
         switch (item.getItemId()) {
             case android.R.id.home:
                 drawerLayout.openDrawer(GravityCompat.START);
+                return true;
+
+            case R.id.logout:
+                logout();
                 return true;
         }
 
@@ -116,6 +130,30 @@ public class MainActivity extends BaseActivity {
                     }
                 })
                 .show();
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.main_menu, menu);
+        return true;
+    }
+
+    private void logout() {
+        try {
+            if (sharedPreferences == null) {
+                sharedPreferences = getSharedPreferences(Const.SHARED_PREF_NAME, MODE_PRIVATE);
+
+                sharedEditor = sharedPreferences.edit();
+                sharedEditor.putString(Const.USER_NAME_KEY, "");
+                sharedEditor.commit();
+
+                navController.navigate(R.id.action_homeFragment_to_loginFragment2);
+                finish();
+            }
+        } catch (Exception e) {
+            Toast.makeText(MainActivity.this, e.getMessage().toString(), Toast.LENGTH_LONG).show();
+        }
+
     }
 
     @Override

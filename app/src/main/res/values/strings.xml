@@ -15,4 +15,9 @@
     <string name="sub_items">Sub items</string>
     <string name="today_weather">Today Weather</string>
     <string name="forecast_weather">Forecast Weather</string>
+    <string name="login">LOGIN</string>
+    <string name="enter_your_username">Enter your username</string>
+    <string name="enter_your_password">Enter your Password</string>
+    <string name="login_user">Login User</string>
+    <string name="logout">logout</string>
 </resources>

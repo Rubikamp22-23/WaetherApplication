@@ -27,6 +27,17 @@ public class SettingFragment extends BaseFragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        initLottieAnimation();
+
+    }
+
+
+    private void initLottieAnimation() {
+        binding.animationView.addAnimatorUpdateListener(
+                (animation) -> {
+                    // Do something.
+                });
+        binding.animationView.playAnimation();
     }
 
 

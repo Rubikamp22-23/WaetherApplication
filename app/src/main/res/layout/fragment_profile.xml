@@ -5,14 +5,10 @@
     android:layout_height="match_parent"
     tools:context=".ui.fragment.ProfileFragment">
 
-    <TextView
+
+    <VideoView
+        android:id="@+id/video"
         android:layout_width="match_parent"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:textStyle="bold"
-        android:textColor="@color/black"
-        android:textSize="30sp"
-        android:layout_height="match_parent"
-        android:text="@string/profile" />
+        android:layout_height="match_parent"/>
 
 </FrameLayout>

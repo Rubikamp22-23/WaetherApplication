@@ -1,4 +1,4 @@
-package info.sanaebadi.weatheractivity.model;
+package info.sanaebadi.weatheractivity.model.current;
 
 import java.util.List;
 import com.google.gson.annotations.SerializedName;
@@ -101,5 +101,25 @@ public class CurrentWeatherResponse{
 
 	public Wind getWind(){
 		return wind;
+	}
+
+	@Override
+	public String toString() {
+		return "CurrentWeatherResponse{" +
+				"rain=" + rain +
+				", visibility=" + visibility +
+				", timezone=" + timezone +
+				", main=" + main +
+				", clouds=" + clouds +
+				", sys=" + sys +
+				", dt=" + dt +
+				", coord=" + coord +
+				", weather=" + weather +
+				", name='" + name + '\'' +
+				", cod=" + cod +
+				", id=" + id +
+				", base='" + base + '\'' +
+				", wind=" + wind +
+				'}';
 	}
 }

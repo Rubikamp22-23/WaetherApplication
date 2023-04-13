@@ -1,4 +1,4 @@
-package info.sanaebadi.weatheractivity.model;
+package info.sanaebadi.weatheractivity.model.current;
 
 import com.google.gson.annotations.SerializedName;
 

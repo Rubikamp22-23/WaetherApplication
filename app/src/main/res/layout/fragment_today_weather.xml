@@ -1,27 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#25839A"
+    android:orientation="vertical"
     tools:context=".ui.fragment.home.TodayWeatherFragment">
 
-
-    <ProgressBar
-        android:id="@+id/prgressbar"
-        android:layout_gravity="center"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-
-    <TextView
-        android:id="@+id/textview_response"
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edittext_city_name"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="center"
-        android:gravity="top"
-        android:layout_marginTop="100dp"
-        android:layout_marginStart="20dp"
-        android:text="@string/today_weather"
-        android:textColor="@color/white" />
+        android:layout_margin="@dimen/margin_4x"
+        android:layout_height="wrap_content"
+        android:hint="@string/enter_the_city"/>
 
-</FrameLayout>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/search"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textview_city_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:layout_margin="@dimen/margin_4x"
+        android:textSize="@dimen/text_size_huge"
+        android:textStyle="bold" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textview_main_weather"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:layout_margin="@dimen/margin_4x"
+        android:textSize="@dimen/text_size_huge"
+        android:textStyle="bold" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textview_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:layout_margin="@dimen/margin_4x"
+        android:textSize="@dimen/text_size_huge"
+        android:textStyle="bold" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textview_min_temp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:layout_margin="@dimen/margin_4x"
+        android:textSize="@dimen/text_size_huge"
+        android:textStyle="bold" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textview_max_temp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:layout_margin="@dimen/margin_4x"
+        android:textSize="@dimen/text_size_huge"
+        android:textStyle="bold" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

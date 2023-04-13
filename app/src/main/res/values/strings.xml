@@ -20,4 +20,7 @@
     <string name="enter_your_password">Enter your Password</string>
     <string name="login_user">Login User</string>
     <string name="logout">logout</string>
+    <string name="city">City:</string>
+    <string name="enter_the_city">Enter the City</string>
+    <string name="search">Search</string>
 </resources>
